@@ -1,4 +1,4 @@
 # Kibana Sql Log Formatter
 
 ##  Installation
-Use this [bookmarkify page](https://bookmarkify.it/4886) to add the bookmarklet to your browser's favourites bar.
+Drag a bookmarklet link from this page [page](https://cdn.rawgit.com/petrkoula/kibanaSqlLogFormatter/master/installPage.html) to your browser's favourites bar.
