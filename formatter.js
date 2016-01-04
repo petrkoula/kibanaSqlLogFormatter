@@ -5,10 +5,13 @@ javascript: (function() {
   var formatSql = function(query, params) {
     if (!query || !sqlParametersJson) throw 'Sql or SqlParameters cannot be empty';
 
-    _.forEach(params, function(p) {
-      console.log("replacing " + p.Name + " with " + p.Value);
-      query = query.replace(": " + p.Name, " " + formatParamValueByType(p.Value));
-      query = query.replace(":" + p.Name, " " + formatParamValueByType(p.Value));
+    _.forEach(params, function (p) {
+        var name = p.Name;
+        var nameCommented = " /*" + name + "*/";
+        var value = p.Value;
+        console.log("replacing " + name + " with " + value);
+        query = query.replace(": " + name, " " + formatParamValueByType(value) + nameCommented);
+        query = query.replace(":" + name, " " + formatParamValueByType(value) + nameCommented);
     });
 
     return query;
