@@ -27,7 +27,7 @@ javascript: (function() {
   };
   var formatParamValueByType = function(obj) {
     var number = +obj;
-    if (number) return number;
+    if (number) return obj;
 
     if (matchDate(obj)) return "to_timestamp('%DATE', 'YYYY-MM-DD\"T\"HH24:MI:SS.FF7\"Z\"')".replace("%DATE", obj);
     return "'" + obj + "'";
