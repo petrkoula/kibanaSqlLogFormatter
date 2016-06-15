@@ -34,7 +34,7 @@ javascript: (function() {
   };
   
   try {
-    var sqlElement = getFieldElement('Sql');
+    var sqlElement = getFieldElement('Payload');
     var sqlParametersJson = getFieldElement('SqlParamaters').text();
     var sqlParameters = JSON.parse("[" + sqlParametersJson + "]");
     
